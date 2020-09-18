@@ -5,9 +5,97 @@
  Author:       Ivan Apostolov
  Author URI:   http://example.com
  Template:     twentynineteen
- Version:      1.0.0
+ Version:      1.0.6
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentynineteenchild
 */
+
+.filter-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+  padding: 10px 0px;
+}
+
+.filter-container > div {
+  flex-grow: 1;
+  background-color: #263238;
+  color: #EEEEEE;  
+  margin: 2px;
+  text-align: left;
+  font-size: 15px;
+}
+
+label {
+  display: block;
+  margin-left: 5px;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #263238;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+  background-color: #263238 !important;
+  color: #ffffff !important;
+}
+
+input {
+  padding: 0 !important;
+  width: calc(100% - 10px);
+  margin: 5px 5px !important;
+  box-sizing: border-box;
+}
+
+.coordinates-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.btn-filter {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  background-color: white;
+  color: #263238;
+  border: 2px solid #263238;
+  border-radius: 0 !important;
+}
+
+.btn-filter:hover {
+  background-color: #263238;
+  color: white;
+}
